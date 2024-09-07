@@ -1,2 +1,0 @@
-# course-name
-//sosat

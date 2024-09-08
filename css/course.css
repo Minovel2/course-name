@@ -1,0 +1,105 @@
+*{
+    cursor: url('icons8-cursor.svg'), auto;
+}
+body{
+    
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+}
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*HAJIMERU*/
+
+
+
+.main{
+    padding: 40px;
+    padding-bottom: 0px;
+}
+
+.container{
+    min-width: 900px;
+    margin-left: auto;
+    margin-left: auto;
+}
+
+.main--wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    border-bottom: solid;
+    padding: 16px;
+}
+
+.logo {
+    display: flex;
+    max-width: 290px;
+}
+
+.header--name{
+    text-align: center;
+    font-family: 'Chillax-Regular';
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.small_icon{
+    height: 25px;
+}
+
+.mainBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.enter{
+    font-weight: 900;
+}
+
+.enter:hover{
+    opacity: 0.6;
+    cursor: revert;
+}
+
+.regist{
+    font-weight: 700;
+}
+
+.regist:hover{
+    opacity: 0.6;
+    cursor: revert;
+}
+
+
+
+/*ROOM*/
+
+
+
+.tableBase{
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
+.tableBaseElement{
+
+}

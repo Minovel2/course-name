@@ -1,0 +1,125 @@
+*{
+    cursor: url('icons8-cursor.svg'), auto;
+}
+body{
+    
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+.header{
+    text-align: center;
+    font-family: 'Chillax-Regular';
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+  
+.leftBlock {
+    border-radius: 36px 0px 0px 36px;
+    background: rgb(34,193,195);
+    background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  }
+
+.regis{
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgb(131 58 180 / 60%) 0%, rgb(253 29 29 / 75%) 50%, rgb(252 176 69 / 74%) 100%);
+}
+
+.rightBlock{
+    background-color: #ffffff;
+  }
+
+.imgHome{
+    width: 100%;
+    height: 100vh;
+    border-radius: 0px 36px 36px 0px;
+}
+
+.forms{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    min-width: 50%;
+    border-radius: 20px;
+    background-color: rgb(255 255 255 / 47%);
+    margin: 36px;
+}
+
+.formItem{
+    left: 5px;
+    font-size: 24px;
+    line-height: 68px;
+    border-radius: 36px;
+    border: solid;
+    margin: 8px 14px;
+    padding-left: 20px;
+}
+
+input::placeholder {
+    color: #999;
+    font-style: italic;
+    padding-left: 10px;
+  }
+
+.formItem:hover{
+    cursor: auto;
+}
+.forms--login {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.send {
+    margin-bottom: 20px;
+    color: black;
+    width: 146px;
+    background-color: rgb(178 155 155 / 39%);
+    line-height: 30px;
+    transition: all 1s ease;
+}
+.send:hover{
+    cursor: pointer;
+    
+    background-color: rgb(140 120 120 / 72%);
+}
+.regis--userName {
+    margin-top: 20px;
+   
+}
+.back{
+    margin: 36px 168px;
+    font-family: 'Chillax-Regular';
+    font-weight: 700;
+    border-color: #ffbbbbad;
+    width: 60px;
+    height: 60px;
+    background-color: #d2ac79a3;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 1s ease;
+}
+.backRegis{
+    margin: 0px 168px 0px 168px;
+}
+.back:hover{
+    background-color: rgb(140 120 120 / 72%);
+}

@@ -1,19 +1,34 @@
-const userName = document.querySelector('#name');
-const login = document.querySelector('#password');
+const login = document.querySelector('#name');
+const password = document.querySelector('#password');
 const repPassword = document.querySelector('#repeatPassword');
 const btn = document.forms.myForm.sendButton;
+localStorage.clear();
 btn.onclick = function () {
-    let nameVal = userName.value;
-    let loginVal = login.value;
-    let repPasswordVal = repPassword.value;
-    console.log(nameVal);
-    console.log(loginVal);
-    console.log(repPasswordVal);
-    userName.value = "";
+    const loginVal = login.value;
+    const passwordVal = password.value;
+    const repPasswordVal = repPassword.value;
+    const DBUser = localStorage.getItem(loginVal);
+    
+    if (DBUser === null) {
+        if (passwordVal == repPasswordVal) {
+            const user = JSON.stringify({
+                password: passwordVal,
+                role: 0
+            });
+            localStorage.setItem(loginVal, user);
+            alert("Вы зарегестрировались!");
+            window.location.replace('../html/workPage.html');
+        }
+        else {
+            alert("Пароли должны совпадать!");
+        }
+    }
+    else {
+        alert("Пользователь с таким логином уже существует!");
+    }
+
     login.value = "";
+    password.value = "";
     repPassword.value = "";
 
-    window.location.replace('../index.html');
 }
-
-//console.log(btn);

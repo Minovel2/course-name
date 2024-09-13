@@ -3,6 +3,7 @@ const password = document.querySelector('#password');
 const repPassword = document.querySelector('#repeatPassword');
 const btn = document.forms.myForm.sendButton;
 localStorage.clear();
+export let user;
 btn.onclick = function () {
     const loginVal = login.value;
     const passwordVal = password.value;
@@ -11,7 +12,7 @@ btn.onclick = function () {
     
     if (DBUser === null) {
         if (passwordVal == repPasswordVal) {
-            const user = JSON.stringify({
+            user = JSON.stringify({
                 password: passwordVal,
                 role: 0
             });

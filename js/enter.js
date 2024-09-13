@@ -1,7 +1,6 @@
 const login = document.querySelector('#name');
 const password = document.querySelector('#password');
 const btn = document.forms.myForm.sendButton;
-export let user;
 btn.onclick = function () {
     const loginVal = login.value;
     const passwordVal = password.value;
@@ -11,9 +10,10 @@ btn.onclick = function () {
         alert("Пользователя с таким логином не существует!");
     }
     else {
-        user = JSON.parse(DBUser);
+        const user = JSON.parse(DBUser);
         if (passwordVal == user.password) {
             alert("Вы вошли!");
+            sessionStorage.setItem("user", DBUser);
             window.location.replace('../html/workPage.html');
         }
         else {

@@ -1,6 +1,6 @@
-export {user as user1} from "./enter.js";
-export {user as user2} from "./regis.js";
+console.log(sessionStorage.user);
+const user = sessionStorage.user;
 
-
-console.log(user1);
-console.log(user2);
+if (user) {
+    //обработка роли
+}

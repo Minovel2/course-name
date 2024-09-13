@@ -2,8 +2,6 @@ const login = document.querySelector('#name');
 const password = document.querySelector('#password');
 const repPassword = document.querySelector('#repeatPassword');
 const btn = document.forms.myForm.sendButton;
-localStorage.clear();
-export let user;
 btn.onclick = function () {
     const loginVal = login.value;
     const passwordVal = password.value;
@@ -12,12 +10,14 @@ btn.onclick = function () {
     
     if (DBUser === null) {
         if (passwordVal == repPasswordVal) {
-            user = JSON.stringify({
+            const user = JSON.stringify({
+                login: loginVal,
                 password: passwordVal,
                 role: 0
             });
             localStorage.setItem(loginVal, user);
             alert("Вы зарегестрировались!");
+            sessionStorage.setItem("user", user);
             window.location.replace('../html/workPage.html');
         }
         else {
@@ -31,5 +31,4 @@ btn.onclick = function () {
     login.value = "";
     password.value = "";
     repPassword.value = "";
-
 }

@@ -6,7 +6,7 @@ btn.onclick = function () {
     const loginVal = login.value;
     const passwordVal = password.value;
     const repPasswordVal = repPassword.value;
-    const DBUser = localStorage.getItem(loginVal);
+    const DBUser = localStorage.getItem("user:" + loginVal);
     
     if (DBUser === null) {
         if (passwordVal == repPasswordVal) {
@@ -15,7 +15,7 @@ btn.onclick = function () {
                 password: passwordVal,
                 role: 0
             });
-            localStorage.setItem(loginVal, user);
+            localStorage.setItem("user:" + loginVal, user);
             alert("Вы зарегестрировались!");
             sessionStorage.setItem("user", user);
             window.location.replace('../html/workPage.html');
@@ -27,8 +27,4 @@ btn.onclick = function () {
     else {
         alert("Пользователь с таким логином уже существует!");
     }
-
-    login.value = "";
-    password.value = "";
-    repPassword.value = "";
 }

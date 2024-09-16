@@ -4,7 +4,7 @@ const btn = document.forms.myForm.sendButton;
 btn.onclick = function () {
     const loginVal = login.value;
     const passwordVal = password.value;
-    const DBUser = localStorage.getItem(loginVal);
+    const DBUser = localStorage.getItem("user:" + loginVal);
     
     if (DBUser === null) {
         alert("Пользователя с таким логином не существует!");
@@ -20,7 +20,4 @@ btn.onclick = function () {
             alert("Неверный пароль!");
         }
     }
-
-    login.value = "";
-    password.value = "";
 }
